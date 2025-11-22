@@ -19,8 +19,6 @@ class Endpoint(Enum):
     GET_ITEM_BY_ID = "/api/1/item/{id}"
     GET_ITEMS_BY_SELLER = "/api/1/{sellerID}/item"
     GET_STATISTIC = "/api/1/statistic/{id}"
-    DELETE_ITEM_BY_ID = "/api/2/item/{id}"
-
 
 def send_request(method, endpoint, json=None, params=None):
     url = config.base_url + endpoint

@@ -22,7 +22,7 @@ def test_delete_item_positive():
     ItemValidator.assert_status(delete, [200])
 
 
-@pytest.mark.parametrize("invalid_id", Boundary.INVALID_IDS)
+@pytest.mark.parametrize("invald_id", Boundary.INVALID_IDS)
 def test_delete_item_negative_invalid_id(invalid_id):
     response = ItemAPI.delete_item_by_id(invalid_id)
     ItemValidator.assert_status(response, [400])

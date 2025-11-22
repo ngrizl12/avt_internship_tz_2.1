@@ -29,15 +29,6 @@ class ItemAPI:
             .send()
         )
 
-    @staticmethod
-    def delete_item_by_id(item_id):
-        return (
-            RequestBuilder()
-            .with_method("DELETE")
-            .with_endpoint(Endpoint.DELETE_ITEM_BY_ID.value.format(id=item_id))
-            .send()
-        )
-
 
 class StatisticAPI:
 
